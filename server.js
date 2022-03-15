@@ -10,3 +10,7 @@ app.get('/', (req, res) => {
 app.listen(8080, () => {
     console.log('listening on 8080');
 })
+
+app.get('/forward', function(req, res) {
+    res.redirect(req.query['go']);
+})
