@@ -19,36 +19,36 @@ app.get("/forward", function (req, res) {
 
 /*
     // E2 stats
-    
-    // async function getdata() {
-    //   const res = await fetch('https://cors-anywhere.herokuapp.com/https://r.earth2.io/landing/metrics');
 
-    //   return await res.json();
+    async function getdata() {
+      const res = await fetch('https://proxy.cors.sh/https://r.earth2.io/landing/metrics');
 
-    // }
+      return await res.json();
 
-        // getdata().then(r => {
+    }
 
-    //   const $esncsum = document.querySelector("#esncsum");
-    //   const $essenceburn = document.querySelector("#essenceburn");
-    //   const $etherclaim = document.querySelector("#etherclaim");
-    //   $esncsum.textContent = r.esnc_sum;
-    //   $essenceburn.textContent = r.esnc_burned_24hrs;
-    //   $etherclaim.textContent = r.ethr_claimed_24hrs;
-    // });
+        getdata().then(r => {
+
+      const $esncsum = document.querySelector("#esncsum");
+      const $essenceburn = document.querySelector("#essenceburn");
+      const $etherclaim = document.querySelector("#etherclaim");
+      $esncsum.textContent = r.esnc_sum;
+      $essenceburn.textContent = r.esnc_burned_24hrs;
+      $etherclaim.textContent = r.ethr_claimed_24hrs;
+    });
 
 
         //E2 game activity
 
-    // async function getactivity() {
-    //   const res = await fetch('https://cors-anywhere.herokuapp.com/https://r.earth2.io/activities');
+    async function getactivity() {
+      const res = await fetch('https://cors-anywhere.herokuapp.com/https://r.earth2.io/activities');
 
-    //   return await res.json();
+      return await res.json();
 
-    // };
+    };
 
-    // getactivity().then(r => {
-    //   console.log(r);
-    // });
+    getactivity().then(r => {
+      console.log(r);
+    });
     */
 
