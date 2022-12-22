@@ -3,11 +3,23 @@ const express = require("express");
 
 const app = express();
 
+app.set('view engine', 'ejs');
+app.set('views', __dirname + "/views");
+
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
+
+app.get("/image", (req, res) => {
+  const url = req.query["go"];
+  // res.render('image', url);
+  // const url = "testurl";
+  res.render('image', { url });
+  // res.send(req.params);
+  // res.send(url);
+})
 
 app.listen(3000, () => {
   console.log("listening on 3000");
