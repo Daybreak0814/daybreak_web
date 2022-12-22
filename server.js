@@ -8,7 +8,7 @@ app.set('views', __dirname + "/views");
 
 app.use(express.static(__dirname + "/public"));
 
-// app.use(express.json());
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
@@ -21,13 +21,14 @@ app.get("/image", (req, res) => {
   res.render('image', { url });
   // res.send(req.params);
   // res.send(url);
-})
+});
 
 // app.post('/image', (req, res) => {
 //   const { imageurl } = req.body;
 //   // res.send(`OK ${imageurl}`);
 //   res.render('image', { imageurl });
-// })
+
+// });
 
 app.listen(3000, () => {
   console.log("listening on 3000");
