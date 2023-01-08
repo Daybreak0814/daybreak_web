@@ -42,7 +42,7 @@ app.get("/forward", function (req, res) {
     // E2 stats
 
     async function getdata() {
-      const res = await fetch('https://proxy.cors.sh/https://r.earth2.io/landing/metrics');
+      const res = await fetch('https://port-0-cors-anywhere-fao2flbzxeqo1.gksl2.cloudtype.app/https://r.earth2.io/landing/metrics');
 
       return await res.json();
 
